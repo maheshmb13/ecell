@@ -25,3 +25,12 @@ CREATE TABLE `users` (
   `code` varchar(20) NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`webmail`),
+  ADD UNIQUE KEY `webmail` (`webmail`);
+
+ALTER TABLE `ambassador`
+  ADD PRIMARY KEY (`webmail`),
+  ADD UNIQUE KEY `webmail` (`webmail`);

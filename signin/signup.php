@@ -8,11 +8,31 @@
 
     if(isset($_POST['subData'])){
 		require('../config.php');
-        if($_POST['signin']){
-            require('../form.php');
+		echo "hi";
+        $name=$_POST['Name'];
+        $college=$_POST['College'];
+        $email=$_POST['Email'];
+        $code=$_POST['Code'];
+        $check ="SELECT * FROM users WHERE webmail='".$email."'";
+        $confirm=$mysqli->query($check);
+        echo "hello";
+        if($confirm->num_rows > 0){
+            echo "DOne";
         }
-        else
-        require('../login.php');       
+        else{
+            $sql ="INSERT INTO users (`name`,`college`, `webmail`,`code`) VALUES ('$name', '$college', '$email', '$code')" ;
+            $res=$mysqli->query($sql);
+            if(! $res){
+                echo $mysqli->error;
+                // echo query($sql);
+            }
+            else{
+				echo("done");
+                $message="Thank you for showing interest in E-club IIT Patna. For more info please visit our website";
+                require('./mail.php');
+            }
+        }
+        echo "hi";  
     }
     
 ?>   
@@ -27,12 +47,12 @@
 		<div class="login-form">
 			<div class="sign-up-htm">
 				<div class="group">
-					<label for="user" class="label" name="Name">Name</label>
-					<input id="user" type="text" class="input" required>
+					<label for="user" class="label" >Name</label>
+					<input id="user" type="text" class="input" required name="Name">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Referral Code</label>
-					<input id="pass" type="password" class="input" data-type="password" required name="Code">
+					<input id="pass" type="text" class="input" data-type="text" required name="Code">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Email Address</label>

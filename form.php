@@ -1,7 +1,8 @@
 <?php
 
-    if(isset($_POST['subData'])){
+    if(1){
         require('./config.php');
+        echo "hi";
         $name=$_POST['Name'];
         $college=$_POST['College'];
         $email=$_POST['Email'];
@@ -31,7 +32,7 @@
 ?>
 
 
-    <form action="" method="post" >
+    <!-- <form action="" method="post" >
         <label for="name">Name</label><br>
         <input type="text" name="Name"required><br><br>
         <label for="email">Email</label><br>
@@ -41,4 +42,4 @@
         <label for="code">Referal Code</label><br>
         <input type="text" name="Code"><br><br>
         <input type="submit" name="subData" value="submit">
-    </form>
+    </form> -->
