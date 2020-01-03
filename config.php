@@ -3,7 +3,7 @@ date_default_timezone_set('Asia/Calcutta');
 
 $host = 'localhost';
 $username = 'root';
-$password  = 'password';
+$password  = '';
 $db = 'ecell';
 
 
