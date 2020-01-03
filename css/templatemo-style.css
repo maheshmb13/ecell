@@ -1,7 +1,4 @@
-/*
-Impulse Template
-http://www.templatemo.com/tm-469-impulse
-*/
+
 
 body {
 	background: lightblue;
@@ -250,6 +247,7 @@ transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 	color: #ffffff;
 	padding-top: 100px;
 	padding-bottom: 100px;
+	
 }
 #team h2 {
 	color: #ffffff;
@@ -472,3 +470,38 @@ hr {
   border-style: inset;
   border-width: 1px;
 }
+
+
+.cap{
+	background: url('../images/wall.jpg') 50% 0 repeat-y fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh; 
+	text-align: center;
+
+
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+	  -webkit-animation-name: flash;
+  animation-name: flash;
+   animation: flash 5s infinite ease-in-out;
+   text-align: center;
+
+}
+
+
+
