@@ -60,7 +60,7 @@
 					session_start();
 					echo "there";
 					$_SESSION['login_user']=$email;
-					// header("location: profile.php");
+					header("Location: /ecell/profile.php");
 					echo "bal";
 					echo $_SESSION['login_user'];
 				}
@@ -95,7 +95,7 @@
 					<input id="pass" type="password" class="input" data-type="password" name= "PassCode">
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In" name="submitData">
+					<input type="submit" class="button" value="Sign In" name="subData">
 				</div>
 				<div class="hr"></div>
 			</div>
