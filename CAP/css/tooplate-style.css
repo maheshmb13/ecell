@@ -326,22 +326,7 @@ p {
     border-color: transparent;
 }
 
-/* Footer */
-footer {
-    position: absolute;
-    bottom: 30px;    
-    text-align: center;
-    left: 0;
-    right: 0;   
-    background-color: "#181818";
 
-}
-
-table{
-    
-}
-
-/*
 .tm-text-highlight { color: white; }
 .tm-text-highlight:hover { color: red; }
 .tm-main-content.tm-footer-relative { flex-direction: column; } 
@@ -364,7 +349,7 @@ a:focus {
 	outline: none;
 }
 
-p:last-child { margin-bottom: 0; }*/
+p:last-child { margin-bottom: 0; }
 
 
 
